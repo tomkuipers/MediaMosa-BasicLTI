@@ -1,0 +1,11 @@
+/* Default_consumer.css */
+
+body {font-size:62.5%}
+
+.dataTables_wrapper, #accordion, #search, #upload {
+    padding-top: 3em;
+}
+
+.empty_table {
+    font-size: 1.5em;
+}

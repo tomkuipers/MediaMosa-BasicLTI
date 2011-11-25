@@ -1,0 +1,23 @@
+<project>
+  <bannerLeft>
+    <name>BasicLTI Provider MediaMosia</name>
+    <src>http://www.uva.nl/template/skins/uva/gfx/uva-nl.jpg</src>
+    <href>http://www.ic.uva.nl</href>
+  </bannerLeft>
+
+  <body>
+    <links>
+      <item name="BasicLTI" href="http://www.imsglobal.org/lti/index.html"/>
+      <item name="UvA" href="http://www.uva.nl"/>
+	  <item name="MediaMosa" href="http://mediamosa.org"/>
+    </links>
+
+    <menu name="Start Point">
+      <item name="FAQs" href="/faqs.html"/>
+    </menu>
+
+     ${reports}
+
+  </body>
+</project>
+

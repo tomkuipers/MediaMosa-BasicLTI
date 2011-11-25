@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faqs xmlns="http://maven.apache.org/FML/1.0.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/FML/1.0.1 http://maven.apache.org/xsd/fml-1.0.1.xsd"
+  title="Frequently Asked Questions" toplink="false">
+
+  <part id="Introduction">
+    <title>Introduction</title>
+    <faq id="What does this tool do">
+      <question>What does the BasicLTI Provider for MediaMosa do?</question>
+      <answer>This is an evolving proof of concept that:<br/>
+        <ol>
+          <li>Allows us to test BasicLTI</li>
+          <li>Adapt MediaMosia to a complex infrastructure</li>
+          <li>Practice grant writing</li>
+          <li>Provide code for an International community</li>
+        </ol>
+      </answer>
+    </faq>
+  </part>
+
+  <part id="Design">
+    <title>Story</title>
+    <faq id="What is cheap man provisioning">
+      <question>What is cheap man provisioning?</question>
+      <answer>The idea is to capture the LDAP ID when you first logon to a new system via a first time log on form<br/>
+        <ol>
+          <li><a href="stories/first_logon.png">Creating unique use per server type image</a></li>
+        </ol>
+      </answer>
+    </faq>
+  </part>
+
+
+
+  <part id="mvn">
+    <title>Installation and use locally</title>
+    <faq id="how-install">
+      <question>How do you make the war and run via Jetty?</question>
+      <answer>
+        <source>mvn clean install jetty:run -e</source>
+        <b>Locations</b><br/>
+        <a href="http://localhost:8443/mmbltiprovider/mmblti">http://localhost:8443/mmbltiprovider/mmblti</a><br/>
+        <a href="https://localhost:8443/mmbltiprovider/mmblti">http://localhost:8443/mmbltiprovider/mmblti</a>
+      </answer>
+    </faq>
+    <faq id="how-to-generate-file">
+      <question>How do you generate this site?</question>
+      <answer>
+        <source>mvn clean site (file system)</source>
+        <source>mvn site:run (jetty 8080)</source>
+        <b>Location</b><br/>
+        <a href="https://localhost:8080">http://localhost:8080</a>
+      </answer>
+    </faq>
+  </part>
+
+  <part id="consumers">
+    <title>Configuring BasicLTI consumers</title>
+    <faq id="how-install-sakai">
+      <question>How do you configure Sakai 2.8?</question>
+      <answer>
+        <ul>
+          <li>Create a new account <a href="http://qa1-nl.sakaiproject.org/portal/site/!gateway/page/!gateway-700">qa1-nl</a> - You are now logged in.</li>
+          <li>Left handside tool list - Worksite Setup</li>
+          <li>New | Edit | Delete (Click on new)</li>
+          <li>Project site</li>
+          <li>Site Title (choose a unique title)</li>
+          <li>Continue</li>
+          <li>Project site Tools (check basic LTI)</li>
+          <li>Continue x 3</li>
+          <li>Create Site</li>
+          <li>Click on site tab</li>
+          <li>Basic LTI tool link</li>
+          <li>Right handside (icon of paper and pencil) - Click</li>
+          <li>Remote tool url - http://your_host:8080/mmbltiprovider/mmblti (replace your_host with your host where you are running the provider)</li>
+          <li>Remote tool key - Sakai_consumer</li>
+          <li>Remote tool Secret - (secret)</li>
+          <li>update options</li>
+        </ul>
+      </answer>
+    </faq>
+    <faq id="how-install-blackboard">
+      <question>How do you configure Blackboard 9.1 SP4 (and later)?</question>
+      <answer>
+        <ul>
+          <li>As a System Admin <a href="http://library.blackboard.com/ref/df5b20ed-ce8d-4428-a595-a0091b23dda3/Content/_admin_app_system/admin_app_basic_lti_tool_providers.htm">configure Blackboard's Basic LTI Tools Providers</a>. 
+          Go to System Admin > Building Blocks > Basic LTI Tools Providers > Register Provider Domain</li>
+          <li>Provider Domain: your_host (omit protocol and portnumbers)</li>
+          <li>Provider Domain Status: Approved</li>
+          <li>Default Configuration: Set globally</li>
+          <li>Tool Provider Key: Blackboard_consumer</li>
+          <li>Tool Provider Secret: (secret)</li>
+          <li>Send User Data: Send user data over any connection</li>
+          <li>User Fields to Send: (check Roles in Course, Name and Email Address)</li>
+          <li>Show User Acknowledgment Message: No</li>
+          <li>Submit</li>
+          <li>As a System Admin go to System Admin > Course Settings > Course Tools to enable Basic LTI as a course tool.</li>
+          <li>As an Instructor create a link in a course. Go to Content Area > Build Content > URL</li>
+          <li>Name: (some description)</li>
+          <li>Url: http://your_host:8080/mmbltiprovider/mmblti (replace your_host with your host where you are running the provider)</li>
+          <li>Check 'This is a link to a Tool Provider'</li>
+          <li>Submit</li>
+        </ul>
+      </answer>
+    </faq>
+  </part>
+</faqs>
