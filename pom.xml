@@ -69,9 +69,14 @@
 			</snapshots>
 		</repository>
 		<repository>
-			<id>bob.ic.uva.nl</id>
-			<name>bob.ic.uva.nl-releases</name>
+			<id>bob.ic.uva.nl-ext-releases-local</id>
+			<name>bob.ic.uva.nl-ext-releases-local</name>
 			<url>http://bob.ic.uva.nl/artifactory/ext-releases-local</url>
+		</repository>
+		<repository>
+			<id>bob.ic.uva.nl-libs-releases-local</id>
+			<name>bob.ic.uva.nl-libs-releases-local</name>
+			<url>http://bob.ic.uva.nl/artifactory/libs-releases-local</url>
 		</repository>
 	</repositories>
 	<pluginRepositories>
