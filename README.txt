@@ -7,7 +7,7 @@ More information about the BasicLTI standard can be found on http://www.imsgloba
 Configuring BasicLTI consumers
 
 How do you configure Sakai 2.8?
-- Create a new account <a href="http://qa1-nl.sakaiproject.org/portal/site/!gateway/page/!gateway-700">qa1-nl</a> - You are now logged in.
+- Create a new account (http://qa1-nl.sakaiproject.org/portal/site/!gateway/page/!gateway-700) - You are now logged in.
 - Left handside tool list - Worksite Setup
 - New | Edit | Delete (Click on new)
 - Project site
@@ -25,7 +25,7 @@ How do you configure Sakai 2.8?
 - update options
 
 How do you configure Blackboard 9.1 SP4 (and later)?
-- As a System Admin <a href="http://library.blackboard.com/ref/df5b20ed-ce8d-4428-a595-a0091b23dda3/Content/_admin_app_system/admin_app_basic_lti_tool_providers.htm">configure Blackboard's Basic LTI Tools Providers</a>. 
+- As a System Admin configure Blackboard's Basic LTI Tools Providers (http://library.blackboard.com/ref/df5b20ed-ce8d-4428-a595-a0091b23dda3/Content/_admin_app_system/admin_app_basic_lti_tool_providers.htm). 
   Go to System Admin > Building Blocks > Basic LTI Tools Providers > Register Provider Domain
 - Provider Domain: your_host (omit protocol and portnumbers)
 - Provider Domain Status: Approved

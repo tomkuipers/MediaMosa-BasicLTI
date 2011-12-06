@@ -6,7 +6,7 @@
 	<groupId>nl.uva.ic</groupId>
 	<artifactId>mmbltiprovider</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.2</version>
+	<version>0.0.4</version>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -54,9 +54,9 @@
 		</developer>
 	</developers>
 	<scm>
-		<connection>scm:svn:https://source.ic.uva.nl/repos/svn/odg-1/basiclti_provider/tags/mmbltiprovider-0.0.2</connection>
-		<developerConnection>scm:svn:https://source.ic.uva.nl/repos/svn/odg-1/basiclti_provider/tags/mmbltiprovider-0.0.2</developerConnection>
-		<url>https://source.ic.uva.nl/viewvc/odg-1/basiclti_provider/tags/mmbltiprovider-0.0.2</url>
+		<connection>scm:svn:https://source.ic.uva.nl/repos/svn/odg-1/basiclti_provider/tags/mmbltiprovider-0.0.4</connection>
+		<developerConnection>scm:svn:https://source.ic.uva.nl/repos/svn/odg-1/basiclti_provider/tags/mmbltiprovider-0.0.4</developerConnection>
+		<url>https://source.ic.uva.nl/viewvc/odg-1/basiclti_provider/tags/mmbltiprovider-0.0.4</url>
 	</scm>
 	<repositories>
 		<repository>
@@ -77,7 +77,7 @@
 			<id>bob.ic.uva.nl-libs-releases-local</id>
 			<name>bob.ic.uva.nl-libs-releases-local</name>
 			<url>http://bob.ic.uva.nl/artifactory/libs-releases-local</url>
-		</repository>
+		</repository>		
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
