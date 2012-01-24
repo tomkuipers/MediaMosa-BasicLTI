@@ -1,4 +1,4 @@
-ï»¿MediaMosa BasicLTI tool provider
+MediaMosa BasicLTI tool provider
 
 Overview
 
@@ -6,7 +6,7 @@ The MediaMosa BasicLTI tool provider supports playing, uploading, searching and 
 
 Details
 
-Basic Learning Tools Interoperability (BasicLTI) is a standard developed by IMS Global Learning Consortium. BasicLTI is designed as a solution for the problem where the same tool functionality had to be coded for multiple LMS platforms. Doing this requires vendor specific knowledge on how to build such a  tool (or â€˜moduleâ€™, or â€˜buildingblockâ€™) and incorporate it in a specific LMS. The proprietary interfaces are very similar but different. And involve high costs of integrating. BasicLTI provides a simple common plugin system. An LMS can be a tool consumer and offer functionality of an external tool to its users. There are a growing number of tool providers and tool consumers. For an overview see http://www.imsglobal.org/cc/statuschart.cfm.
+Basic Learning Tools Interoperability (BasicLTI) is a standard developed by IMS Global Learning Consortium. BasicLTI is designed as a solution for the problem where the same tool functionality had to be coded for multiple LMS platforms. Doing this requires vendor specific knowledge on how to build such a  tool (or ‘module’, or ‘buildingblock’) and incorporate it in a specific LMS. The proprietary interfaces are very similar but different. And involve high costs of integrating. BasicLTI provides a simple common plugin system. An LMS can be a tool consumer and offer functionality of an external tool to its users. There are a growing number of tool providers and tool consumers. For an overview see http://www.imsglobal.org/cc/statuschart.cfm.
 
 A tool consumer and the tool MediaMosa tool provider share a key-value pair which is used for authorization through the  OAuth protocol. OAuth makes sure the tool is secured, the information channels not open to the world, but can only be accessed from a preconfigured LMS. You can even configure multiple LMS within the same tool. The tool has support for internationalization (i18n). Currently English and Dutch languages are available. 
 
@@ -19,9 +19,9 @@ Requirements
 
 Installation
 
-Build the application by checking out the repo at https://github.com/tomkuipers/MediaMosa-BasicLTI and running â€˜mvn packageâ€™. The result is a file called â€˜mmbltiprovider.warâ€™. Copy this war file in the webapps directory of your Tomcat installation.
+Build the application by checking out the repo at https://github.com/tomkuipers/MediaMosa-BasicLTI and running ‘mvn package’. The result is a file called ‘mmbltiprovider.war’. Copy this war file in the webapps directory of your Tomcat installation.
 
-Create a file called â€˜basiclti_consumersecrets.propertiesâ€™ (or copy from $CATALINA_HOME /webapps/ mmbltiprovider/WEB-INF/ basiclti_consumersecrets.properties ) to $CATALINA_HOME/conf. Modify accordingly. Note, the default values are known to the world and should be changed.
+Create a file called ‘basiclti_consumersecrets.properties’ (or copy from $CATALINA_HOME /webapps/ mmbltiprovider/WEB-INF/ basiclti_consumersecrets.properties ) to $CATALINA_HOME/conf. Modify accordingly. Note, the default values are known to the world and should be changed.
 
 Setup your connection to the MediaMosa platform by editing the file   $CATALINA_HOME /webapps/mmbltprovider/WEB-INF/classes/mediamosa.properties. Supply a valid hostname, username and password combination.
 
@@ -30,35 +30,35 @@ Restart Tomcat. The application is running at http://your_host:8080/mmbltiprovid
 
 Configuration
 
-Configuration of BasicLTI consumers varies from vendor to vendor. When asked for a launch url point it to http://your_host:8080/mmbltiprovider/mmblti.
+Configuration of BasicLTI consumers varies from vendor to vendor. When asked for a launch url point it to http://your_host:8080/mmbltiprovider/mmblti/tool.
 
 See README.txt for instructions on how to configure Blackboard and Sakai.
 
 
 Functionality
 
-The MediaMosa BasicLTI provider tool allows users enrolled as â€˜Instructorâ€™ to upload, play, search, edit metadata and organize media resources. 
-Users enrolled as â€˜Studentâ€™ have limited functionality and can only play media content selected by an Instructor.
+The MediaMosa BasicLTI provider tool allows users enrolled as ‘Instructor’ to upload, play, search, edit metadata and organize media resources. 
+Users enrolled as ‘Student’ have limited functionality and can only play media content selected by an Instructor.
 
 Usage
 
 When the tool is launched by an Instructor a navigation bar is shown in the opening screen. This window shows the resources for a particular course and resource link combination. Available options are Tool, Browse, Upload, Search, Logout.
 
-Tool â€“ shows selected resources
-Browse â€“ browse your media content
-Upload â€“ upload media content
-Search â€“ search for media also from other users
-Logout â€“ end the current session
+Tool – shows selected resources
+Browse – browse your media content
+Upload – upload media content
+Search – search for media also from other users
+Logout – end the current session
 
 
 Changing appearance
 
-The MediaMosa BasicLTI provider tool uses the  jQueryUI framework for styling. The default theme â€˜smoothenessâ€™ can be changed to an alternative theme or be overridden by custom CSS. Visit http://jqueryui.com/themeroller/ for an overview of available themes.
+The MediaMosa BasicLTI provider tool uses the  jQueryUI framework for styling. The default theme ‘smootheness’ can be changed to an alternative theme or be overridden by custom CSS. Visit http://jqueryui.com/themeroller/ for an overview of available themes.
 To change the current theme edit src/main/webapp/WEB-INF/jsp/tool.jsp  
 and change line:
 
 <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" type="text/css" media="all" />
 
-Replace â€˜baseâ€™ with the theme of your choice. Available options are base, black-tie, blitzer, cupertino, dark-hive, dot-luv, eggplant, excite-bike, flick, hot-sneaks, humanity, le-frog, mint-choc, overcast, pepper-grinder, redmond, smoothness, south-street, start, sunny, swanky-purse, trontastic, ui-darkness, ui-lightness, and vader.
+Replace ‘base’ with the theme of your choice. Available options are base, black-tie, blitzer, cupertino, dark-hive, dot-luv, eggplant, excite-bike, flick, hot-sneaks, humanity, le-frog, mint-choc, overcast, pepper-grinder, redmond, smoothness, south-street, start, sunny, swanky-purse, trontastic, ui-darkness, ui-lightness, and vader.
 
 

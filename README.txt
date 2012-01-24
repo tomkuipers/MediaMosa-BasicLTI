@@ -19,7 +19,7 @@ How do you configure Sakai 2.8?
 - Click on site tab
 - Basic LTI tool link
 - Right handside (icon of paper and pencil) - Click
-- Remote tool url - http://your_host:8080/mmbltiprovider/mmblti (replace your_host with your host where you are running the provider)
+- Remote tool url - http://your_host:8080/mmbltiprovider/mmblti/tool (replace your_host with your host where you are running the provider)
 - Remote tool key - Sakai_consumer
 - Remote tool Secret - (secret)
 - update options
@@ -39,6 +39,6 @@ How do you configure Blackboard 9.1 SP4 (and later)?
 - As a System Admin go to System Admin > Course Settings > Course Tools to enable Basic LTI as a course tool.
 - As an Instructor create a link in a course. Go to Content Area > Build Content > URL
 - Name: (some description)
-- Url: http://your_host:8080/mmbltiprovider/mmblti (replace your_host with your host where you are running the provider)
+- Url: http://your_host:8080/mmbltiprovider/mmblti/tool (replace your_host with your host where you are running the provider)
 - Check 'This is a link to a Tool Provider'
 - Submit
